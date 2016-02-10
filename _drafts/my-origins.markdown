@@ -1,0 +1,2 @@
+#My Story
+My first exposure to the world of programming was through the "COMP1100" course taught at ANU in 2010. The lecturer, Dr. Uwe Zimmer, taught us the basics of programming and algorithms using Haskell (an interesting departure from the "learn an imperative language first" style of teaching). After that I was hooked, I knew this was the kind of thing I wanted to do - I changed unversity, changed my major and here I am now still learning as much as I can with the same passion I had back all those years ago.
