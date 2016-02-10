@@ -8,7 +8,7 @@
 // Our variables
 $base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
-$base-font-weight: 400;
+$base-font-weight: 200;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
@@ -47,9 +47,9 @@ $on-laptop:        800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+        "variables",
         "base",
         "layout",
         "syntax-highlighting",
-        "variables",
-        "landing"
+        "home-page"
 ;
