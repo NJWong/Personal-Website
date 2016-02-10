@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: post
+date: 2007-09-01
 title: About Me
 permalink: /about/
 ---
