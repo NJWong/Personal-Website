@@ -6,13 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Nicholas Wong | Web Developer | Melbourne, Australia
+title: Nicholas Wong | Melbourne, Australia
 email: njwon4@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  A "Blog-folio" (part blog, part project portfolio) for Nicholas Wong.
-  Nicholas is a Software Engineering student at Monash University in
-  Melbourne, Australia. He is passionate about web development, from
-  front-end to back-end and everything in between.
+  Nicholas is a software engineering student at Monash University.
+  Passionate about writing clean, efficient and maintainable code,
+  as well as working on and riding his motorcycle.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 github_username:  NJWong

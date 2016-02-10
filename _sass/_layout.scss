@@ -2,7 +2,6 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $red-theme;
     min-height: 56px;
 
@@ -98,7 +97,7 @@
  * Site footer
  */
 .site-footer {
-    border-top: 1px solid $grey-color-light;
+    border-top: 1px solid $red-theme;
     padding: $spacing-unit 0;
 }
 
