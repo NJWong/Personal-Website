@@ -5,30 +5,24 @@
     <h2 class="footer-heading">Nicholas Wong</h2>
 
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
+      <div class="footer-col footer-col-6">
         <ul class="contact-list">
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a>           </li>
+            <li>
+                <p>
+                Primarily a front-end web developer, currently studying at Monash University. Experience in back-end web development with plans to move to a full-stack position.
+                </p>
+            </li>
+            <li>
+                <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+                {% if site.github_username %}
+                    {% include icon-github.html username=site.github_username %}
+                {% endif %}
+            </li>
         </ul>
       </div>
 
-      <div class="footer-col footer-col-1">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-1">
-        &copy; 2010<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Nicholas Wong.
+      <div class="footer-col footer-col-6">
+        &copy; 2015<script>new Date().getFullYear()>2015&&document.write("-"+new Date().getFullYear());</script>, Nicholas Wong.
       </div>
     </div>
 
