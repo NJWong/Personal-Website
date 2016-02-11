@@ -72,6 +72,9 @@
         .trigger {
             clear: both;
             display: none;
+            a {
+                color: $text-color;
+            }
         }
 
         &:hover .trigger {
