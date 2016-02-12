@@ -1,1 +1,0 @@
-As past of my final year, I need to complete a year-long team software project, which aims to put everything we have learned (and more) to the test. I can feel a whole bunch of learning coming up and I want to share my experiences with those willing to read.
