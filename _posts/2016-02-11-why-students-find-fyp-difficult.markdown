@@ -2,7 +2,7 @@
  layout: post
  title:  "Why Students Find FYP Difficult"
  date:   2016-02-11
- categories: jekyll update
+ category: blog
 ---
 ### *Useful Stuff*
 * **FYP** - Full/Final Year Project
