@@ -1,0 +1,112 @@
+---
+ layout: post
+ title:  "CSS-101 Part 1 - Simple Centering"
+ date:   2016-02-13
+ category: cool-things
+ level: beginner
+---
+### Introduction
+I'll start off my CSS-101 series with something very basic but can be a problem for a lot of beginners.
+
+### Setup
+I have two divs, one with the <code>id="wrapper"</code> and the other <code>id="square"</code>, seen below:
+{% highlight html %}
+<div id="wrapper">
+    <div id="square"></div>
+</div>
+{% endhighlight %}
+I have the following styles:
+{% highlight css %}
+#wrapper {
+    border: 1px solid black;
+    width: 250px;
+    height: 150px;
+}
+
+#square {
+    background: grey;
+    width: 20px;
+    height: 20px;
+}
+{% endhighlight %}
+
+Here is a CodePen of what we have so far:
+<p data-height="268" data-theme-id="0" data-slug-hash="VegQLm" data-default-tab="result" data-user="njwon4" class='codepen'>See the Pen <a href='http://codepen.io/njwon4/pen/VegQLm/'>CSS-101-p1.1</a> by Nicholas Wong (<a href='http://codepen.io/njwon4'>@njwon4</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+### The Goal
+So now my goal is to center the square div vertically and horizontally within the wrapper div.
+
+Most beginners (including myself when I started) will use absolute positioning to achieve this:
+{% highlight css %}
+#square {
+    background: grey;
+    width: 20px;
+    height: 20px;
+    margin-left: 115px;
+    margin-top: 65px;
+}
+{% endhighlight %}
+<p data-height="268" data-theme-id="0" data-slug-hash="MKLQKR" data-default-tab="result" data-user="njwon4" class='codepen'>See the Pen <a href='http://codepen.io/njwon4/pen/MKLQKR/'>CSS-101-p1.2</a> by Nicholas Wong (<a href='http://codepen.io/njwon4'>@njwon4</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+Cool! Mission accomplished and I can move on to my next task. Right? Not quite.
+
+### The Problem
+As with most things that use relative measurements, you're really setting your element positions in stone.
+
+If the size of the wrapper div or square div changes, you need to work out  positions based on the new sizes.
+
+To summarise, using relative measurements is not good for responsive positioning. How can we make this better?
+
+### One Solution
+We can set the wrapper div's <code>display</code> property to <code>table-cell</code>, and specify its <code>vertical-align</code> property <code>middle</code>:
+{% highlight css %}
+#wrapper {
+    border: 1px solid black;
+    width: 250px;
+    height: 150px;
+    display: table-cell;
+    vertical-align: middle;
+}
+{% endhighlight %}
+This makes the wrapper div behave like a <code><td></code> element, and then specifies its contents to vertically align to the middle.
+
+We can then set the left and right <code>margin</code> around the square div to <code>auto</code>:
+{% highlight css %}
+#square {
+    background: grey;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+}
+{% endhighlight %}
+When we set the left and right margin of a block level element (in this case the square div) to auto some cools things happen. Firstly, the square div takes up the specified horizontal space (i.e. 20px), then it will look at the remaining space inside the parent (250px - 20px = 230px), and then give an even left and right margin (230px / 2 = 115px).
+
+The result is shown in this CodePen.
+<p data-height="268" data-theme-id="0" data-slug-hash="NxoybL" data-default-tab="result" data-user="njwon4" class='codepen'>See the Pen <a href='http://codepen.io/njwon4/pen/NxoybL/'>CSS-101-p1.3</a> by Nicholas Wong (<a href='http://codepen.io/njwon4'>@njwon4</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+This is a better solution because it works for different wrapper and square sizes, thus is a more responsive solution than using absolute measurements. One downside to this is that if the square is larger than the wrapper, the wrapper will increase in size to accomodate this. If this is a problem, then you can stop the wrapper resize by adding a <code>max-width</code> and <code>max-height</code> property:
+{% highlight css %}
+#wrapper {
+    border: 1px solid black;
+    width: 250px;
+    height: 150px;
+    max-width: 250px;
+    max-height: 150px;
+    display: table-cell;
+    vertical-align: middle;
+}
+{% endhighlight %}
+### My Favourite Solution
+Call me picky, but I try to refrain from using table elements (or elements whose display property makes them act like table elements) unless I'm actually using a table.
+
+My go-to solution for vertically and horizontally aligning an element inside another would be to use the magical ***Flexbox***.
+
+<p data-height="268" data-theme-id="0" data-slug-hash="yeZvzd" data-default-tab="result" data-user="njwon4" class='codepen'>See the Pen <a href='http://codepen.io/njwon4/pen/yeZvzd/'>CSS-101-p1.4</a> by Nicholas Wong (<a href='http://codepen.io/njwon4'>@njwon4</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+Flexbox is supported by all modern browsers, and partially supported by IE 10/11.
+
+[CSS-Tricks has an awesome guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
