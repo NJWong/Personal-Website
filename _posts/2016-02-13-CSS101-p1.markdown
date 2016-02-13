@@ -6,7 +6,7 @@
  level: beginner
 ---
 ### Introduction
-I'll start off my CSS-101 series with something very basic but can be a problem for a lot of beginners.
+I'll start off my CSS-101 series with something very basic but can be a problem for a lot of beginners: centering an element inside of another element.
 
 ### Setup
 I have two divs, one with the <code>id="wrapper"</code> and the other <code>id="square"</code>, seen below:
