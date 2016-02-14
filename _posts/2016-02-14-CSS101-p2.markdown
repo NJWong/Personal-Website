@@ -1,0 +1,55 @@
+---
+ layout: post
+ title:  "CSS-101 Part 2 - Putting the Foot(er) Down"
+ date:   2016-02-14
+ category: cool-things
+ level: beginner
+---
+### Introduction
+I guess you could say that I'm a bit of a control freak when it comes to website layouts. I am not happy until something looks exactly the way I want it to. What's even worse is if I know how to fix something, but the tools I am using doesn't let me make small changes easily (I'm looking at you, WordPress templating engine). This is exactly why I like Jekyll (and Middleman, or any site generator that lets me change the structure or style of my pages easily).
+
+### The Problem
+Yesterday I was very excited that I had pushed my first few blog posts to production. Of course, in my excitement I  pushed my website to GitHub Pages without double checking that everything was okay.
+
+Spelling and grammar errors aside, there was one layout issue  that really stuck out as unprofessional to me: my footer was always located right after the page content rather than the bottom of my screen. For pages that were light on content it would look like this:
+
+![alt text](/assets/post_pics/css-101-p2.1.png "Before")
+
+Yuck. Let's fix that up!
+
+### The Solution
+So after a quick Google search, this is a fairly common problem for developers. The solution is generally known as a "CSS Sticky Footer". The end result would be this:
+
+![alt text](/assets/post_pics/css-101-p2.2.png "After")
+
+Much nicer! How would I accomplish this? Why, with Flexbox of course.
+
+There are a number of ways to accomplish this - just a quick Google for "CSS Sticky Footer" reveals solutions ranging from <code>position: absolute;</code>, clearfixes, even hacky JS that inserts the footer element after the page loads... however none of these worked for a footer whose height is not defined. Flexbox to the rescue!
+
+I'm not too concerned with supporting early versions of IE, so I stuck with the elegance of Flexbox to achieve me Sticky Footer.
+
+Here is the default layout for my Jekyll pages:
+{% highlight html %}
+<body>
+    <header class="site-header">...</header>
+    <div class="page-content">...</div>
+    <footer class="site-footer">...</footer>
+</body>
+{% endhighlight %}
+
+
+{% highlight css %}
+body {
+    ...
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+.page-content {
+    ...
+    flex: 1;
+}
+{% endhighlight %}
+
+### Acknowledgements
+[Done thanks to this (appropriately named) "Solved by Flexbox" article](https://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/)

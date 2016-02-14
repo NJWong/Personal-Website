@@ -1,3 +1,9 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
 /**
  * Site header
  */
@@ -175,6 +181,7 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+    flex: 1;
 }
 
 .page-heading {
