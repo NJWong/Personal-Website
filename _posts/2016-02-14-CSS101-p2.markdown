@@ -6,10 +6,10 @@
  level: beginner
 ---
 ### Introduction
-I guess you could say that I'm a bit of a control freak when it comes to website layouts. I am not happy until something looks exactly the way I want it to. What's even worse is if I know how to fix something, but the tools I am using doesn't let me make small changes easily (I'm looking at you, WordPress templating engine). This is exactly why I like Jekyll (and Middleman, or any site generator that lets me change the structure or style of my pages easily).
+I guess you could say that I'm a bit of a control freak when it comes to website layouts. I am not happy until something looks exactly the way I want it to. One thing that gets me mad is if I know how to fix something, but the templating engine I am using doesn't let me make small changes easily (I'm looking at you, WordPress). This is exactly why I like Jekyll (and Middleman, or any site generator that lets me change the structure or style of my pages easily).
 
 ### The Problem
-Yesterday I was very excited that I had pushed my first few blog posts to production. Of course, in my excitement I  pushed my website to GitHub Pages without double checking that everything was okay.
+Yesterday I was very excited that I had my first few blog posts ready. Of course, in my excitement I pushed my website to GitHub Pages without double checking that everything was okay.
 
 Spelling and grammar errors aside, there was one layout issue  that really stuck out as unprofessional to me: my footer was always located right after the page content rather than the bottom of my screen. For pages that were light on content it would look like this:
 
@@ -24,9 +24,9 @@ So after a quick Google search, this is a fairly common problem for developers. 
 
 Much nicer! How would I accomplish this? Why, with Flexbox of course.
 
-There are a number of ways to accomplish this - just a quick Google for "CSS Sticky Footer" reveals solutions ranging from <code>position: absolute;</code>, clearfixes, even hacky JS that inserts the footer element after the page loads... however none of these worked for a footer whose height is not defined. Flexbox to the rescue!
+There are a number of ways to accomplish this - just a quick Google for "CSS Sticky Footer" reveals solutions ranging from position: absolute, clearfixes, even hacky JS that inserts the footer element after the page loads... however none of these worked for a footer whose height is not defined. Flexbox to the rescue!
 
-I'm not too concerned with supporting early versions of IE, so I stuck with the elegance of Flexbox to achieve me Sticky Footer.
+I'm not too concerned with supporting early versions of IE, so I stuck with the elegance of Flexbox to achieve my Sticky Footer.
 
 Here is the default layout for my Jekyll pages:
 {% highlight html %}
