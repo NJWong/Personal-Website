@@ -12,7 +12,7 @@ I currently study software engineering at Monash University. I've had experience
 I go out of my way to write clean, efficient and maintainable code.
 
 # What am I passionate about?
-I am passionate about doing awesome things and meeting new people. Technology consulting provides this on a professional level. I achieve this on a personal level by riding my motorcycle with friends and going to rider meetups.
+I am passionate about doing awesome things and meeting new people. Technology consulting provides this on a professional level. I achieve this on a personal level by riding my motorcycle with friends and drinking lots of coffee.
 
 # Why do I blog?
 No particular reason - mostly because I want to :). I created this blog just before I started my final year of my software engineering degree so it's a good way to keep track of what I do, what I learn, and to keep track of how I grow.
